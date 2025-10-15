@@ -81,4 +81,27 @@ Karşılaştırılarak:
 
 ---
 
-📘 **Özet:** Merge Sort diziyi sürekli ikiye bölerek küçük parçalarda sıralar ve yeniden birleştirir. Bu yüzden işlem sayısı logaritmik çarpanla artar.
+**Özet:** Merge Sort diziyi sürekli ikiye bölerek küçük parçalarda sıralar ve yeniden birleştirir. Bu yüzden işlem sayısı logaritmik çarpanla artar.
+
+# Binary Search Tree Projesi (Proje 3)
+
+Dizi: **[7, 5, 1, 8, 3, 6, 0, 9, 4, 2]**
+
+## BST Ekleme Aşamaları (insert)
+1. **root 7’dir.**
+2. **5** eklenir → 5 < 7 ⇒ **7’nin solunda 5**.
+3. **1** eklenir → 1 < 7 ⇒ sola (5); 1 < 5 ⇒ **5’in solunda 1**.
+4. **8** eklenir → 8 > 7 ⇒ **7’nin sağında 8**.
+5. **3** eklenir → 3 < 7 ⇒ sola (5); 3 < 5 ⇒ sola (1); 3 > 1 ⇒ **1’in sağında 3**.
+6. **6** eklenir → 6 < 7 ⇒ sola (5); 6 > 5 ⇒ **5’in sağında 6**.
+7. **0** eklenir → 0 < 7 ⇒ sola (5); 0 < 5 ⇒ sola (1); 0 < 1 ⇒ **1’in solunda 0**.
+8. **9** eklenir → 9 > 7 ⇒ sağa (8); 9 > 8 ⇒ **8’in sağında 9**.
+9. **4** eklenir → 4 < 7 ⇒ sola (5); 4 < 5 ⇒ sola (1); 4 > 1 ⇒ sağa (3); 4 > 3 ⇒ **3’ün sağında 4**.
+10. **2** eklenir → 2 < 7 ⇒ sola (5); 2 < 5 ⇒ sola (1); 2 > 1 ⇒ sağa (3); 2 < 3 ⇒ **3’ün solunda 2**.
+
+## Doğrulama (In-order dolaşım)
+Sol-Kök-Sağ: **[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]**  → artan sıralı.
+
+## Big-O (bilgi amaçlı)
+- Ortalama/good case arama/ekleme/silme: **O(log n)**
+- En kötü (ağaç hatalı dengelenmişse): **O(n)**
